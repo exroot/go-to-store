@@ -92,11 +92,8 @@ const handler = async (event) => {
         link,
       },
     };
-
-    console.log("response: ", response);
     return response;
   } catch (err) {
-    console.log("ERROR AT LAMBDA: ", err);
     return {
       statusCode: err.httpStatus || 500,
       body: JSON.stringify(err),

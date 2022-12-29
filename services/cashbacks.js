@@ -17,7 +17,6 @@ export const getCashbackByIdAndStore = async (cashbackId, store, client) => {
     }
     return results;
   } catch (err) {
-    console.log("ERROR: ", err);
     throw new ErrorException({
       httpStatus: 500,
       message: "Error al buscar el cashback",
