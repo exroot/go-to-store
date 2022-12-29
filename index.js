@@ -10,7 +10,7 @@ import { generateLink, generateTrackerInfo } from "./services/trackerInfo.js";
 import { getStoreConfigs } from "./services/storeConfigs.js";
 import { newUserStoreLog } from "./services/userStoreLog.js";
 
-const handler = async (event) => {
+export const handler = async (event) => {
   dotenv.config();
   const { queryStringParameters } = event;
   const { Client } = pkg;
@@ -221,19 +221,3 @@ const getPartnerFromRequest = async (queryParams) => {
     });
   }
 };
-
-//ru=NTQ=&rt=MTYx&rr=web
-const event = {
-  queryStringParameters: {
-    ru: "NTQ=",
-    rt: "MTYx",
-    rc: "",
-    rr: "web",
-    rp: "",
-  },
-  requestContext: {
-    identity: { sourceIp: "45.185.148.127" },
-  },
-};
-
-handler(event);
