@@ -1,0 +1,16 @@
+{
+  "name": "go-to-store",
+  "version": "1.0.0",
+  "description": "Iwana go to store service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wingsoft",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "pg": "^8.8.0"
+  }
+}
